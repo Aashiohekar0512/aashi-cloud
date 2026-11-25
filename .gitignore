@@ -1,0 +1,16 @@
+# Secrets
+.env
+.env.*
+!.env.example
+backend/.env
+
+# Python environment
+backend/venv/
+backend/_pycache_/
+backend/**/*.pyc
+
+# Database
+backend/*.db
+
+# Uploaded files
+backend/uploads/

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aashi Cloud Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>☁️ Aashi Cloud</h2>
+    <p class="menu-title">WORKSPACE</p>
+
+    <a class="active" href="#">Dashboard</a>
+    <a href="#projects">My Projects</a>
+    <a href="#deployments">Deployments</a>
+    <a href="#settings">Settings</a>
+
+    <div class="sidebar-bottom">
+        <p>Powered by Aashi Tech</p>
+    </div>
+</div>
+
+<main class="main">
+    <header>
+        <div>
+            <h1>Dashboard</h1>
+            <p>Welcome to Aashi Cloud</p>
+        </div>
+        <span class="status">● System Online</span>
+    </header>
+
+    <section class="stats">
+        <div class="card">
+            <p>Total Projects</p>
+            <h2 id="totalProjects">0</h2>
+        </div>
+        <div class="card">
+            <p>Deployments</p>
+            <h2>0</h2>
+        </div>
+        <div class="card">
+            <p>Platform Status</p>
+            <h2 class="green">Active</h2>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <div class="section-heading">
+            <h2>My Projects</h2>
+            <button onclick="openProjectForm()">+ New Project</button>
+        </div>
+
+        <div id="projectList">
+            Loading projects...
+        </div>
+    </section>
+
+    <section class="project-form" id="projectForm" hidden>
+        <h2>Create New Project</h2>
+
+        <input id="projectName" placeholder="Project Name">
+
+        <input id="projectFramework"
+               placeholder="Framework (Flutter, React, HTML)">
+
+        <button onclick="createProject()">Create Project</button>
+        <button class="cancel" onclick="closeProjectForm()">Cancel</button>
+    </section>
+
+    <footer>
+        © 2026 Aashi Cloud | Aashi Tech
+    </footer>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
